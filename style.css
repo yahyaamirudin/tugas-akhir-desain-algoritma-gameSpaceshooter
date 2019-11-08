@@ -1,78 +1,175 @@
 #main-play-area {
-    width: 800px;
-    height: 500px;
-    background-image: url('images/space-6.png');
-    margin: 0 auto;
-  }
-  
-  #instructions-text {
-    position: relative;
-    color: white;
-    top: 20px;
-    text-shadow: 2px 2px black;
-  }
-  
-  #start-button,#instructions,#about{
-    position: relative;
-    color: white;
-    top: 80px;
-    text-shadow: 2px 2px black;
-  }
-  
-  #menu{
-      margin: 0 auto;
-      text-align: center;
-      background-color: coral;
-      width: 400px;
-      height: 400px;
-  }
-  #start-button,#instructions,#about,.awal:hover {
-    cursor: pointer;
-  }
-  
-  #player-controlled-shooter {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    left: 20px;
-    top: 180px;
-  }
-  
-  .laser {
-    width: 20px;
-    height: 20px;
-    position: relative;
-  }
-  
-  .monster {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow:
-         0 0 6px 3px #fff,
-         0 0 5px 6px #f0f,
-         0 0 9px 9px #0ff;
-  }
-  
-  .monster-transition {
-    opacity: 1;
-    transition: opacity 1.5s ease-out;
-  }
-  
-  
-  .dead-monster {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    opacity: 0;
-  }
+  width: 800px;
+  height: 500px;
+  background-image: url('images/space-6.png');
+  margin: 0 auto;
+}
 
-  #instruksi{
-      display: none;
-      margin: 0 auto;
-      text-align: center;
-      color: white;
-  }
-  
+#instructions-text {
+  position: relative;
+  color: white;
+  top: 40px;
+  text-shadow: 2px 2px black;
+}
+
+#start-button,
+#instructions,
+#about {
+  position: relative;
+  color: white;
+  top: 80px;
+  text-shadow: 2px 2px black;
+}
+
+#judul {
+  position: relative;
+  color: white;
+  top: 40px;
+  text-shadow: 2px 2px black;
+}
+
+#menu {
+  margin: 0 auto;
+  text-align: center;
+  background-color: coral;
+  width: 400px;
+  height: 400px;
+}
+
+#start-button,
+#instructions,
+#about,
+#awal:hover {
+  cursor: pointer;
+}
+
+#player-controlled-shooter {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 20px;
+  top: 180px;
+}
+
+.laser {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.monster {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow:
+    0 0 6px 3px #fff,
+    0 0 5px 6px #f0f,
+    0 0 9px 9px #0ff;
+}
+
+.monster-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-out;
+}
+
+
+.dead-monster {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  opacity: 0;
+}
+
+#instruksi {
+  display: none;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+#score {
+  color: white;
+  margin-top: -20px;
+  text-align: right;
+  position: absolute;
+}
+
+body {
+  margin: 0;
+  background-color: #800000;
+  font-family: sans-serif;
+}
+
+body header.header {
+  padding: 0 40px;
+}
+
+body header.header nav.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body header.header nav.main-nav .nav-items-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header.header nav.main-nav .nav-items-container .nav-item a.nav-link {
+  display: block;
+  line-height: 70px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #f3f3f3;
+}
+
+body main.main-app {
+  color: #f3f3f3;
+  padding: 20px;
+  min-height: calc(100vh - 140px);
+}
+
+body main.main-app .content-wrapper {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+body main.main-app .content-wrapper section.creator .creator-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (calc(50% - 5%))[2];
+  grid-template-columns: repeat(2, calc(50% - 5%));
+  grid-column-gap: 10%;
+}
+
+body main.main-app .content-wrapper section.creator .creator-grid .creator-container img {
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+body main.main-app .content-wrapper section.creator .creator-grid .creator-container h4.person-name {
+  text-align: center;
+}
+
+body footer.footer {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  padding: 20px 40px;
+}
