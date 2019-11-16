@@ -139,7 +139,7 @@ function moveMonster(monster) {
     } else {
       monster.style.left = `${xPosition - 4}px`
     }
-  }, 30)
+  }, 40)
 }
 
 
@@ -150,7 +150,7 @@ function checkLaserCollision(laser, monster) {
   let monsterTop = parseInt(monster.style.top)
   let monsterBottom = monsterTop - 30
   let monsterLeft = parseInt(monster.style.left)
-  if (laserLeft != 540 && laserLeft + 100 >= monsterLeft) {
+  if (laserLeft != 540 && laserLeft + 250 >= monsterLeft) {
     if ( (laserTop <= monsterTop && laserTop >= monsterBottom) ) {
       return true
     } else {
